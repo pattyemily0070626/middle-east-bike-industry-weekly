@@ -1,0 +1,12 @@
+data/raw/
+data/processed/*.tmp
+__pycache__/
+*.pyc
+.env
+.venv/
+*.log
+~$*
+.DS_Store
+Thumbs.db
+api/node_modules/
+api/local.settings.json

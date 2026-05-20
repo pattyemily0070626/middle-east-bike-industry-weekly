@@ -1,0 +1,14 @@
+{
+  "_note": "Drewry WCI 每週實數歷史 — 由 verify.py 累積寫入，render 時讀上期實數避免反推。如缺上期則 fallback 反推並標『（由 +X% 反推）』。",
+  "_format": "key = ISO week, value = {fetched_at, routes: {route_id: {usd_40ft, wow_pct}}}",
+  "2026-W20": {
+    "fetched_at": "2026-05-14",
+    "source": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry",
+    "routes": {
+      "shanghai-rotterdam": {"usd_40ft": 2413, "wow_pct": 11},
+      "shanghai-los-angeles": {"usd_40ft": 3357, "wow_pct": 10},
+      "shanghai-new-york":   {"usd_40ft": 4252, "wow_pct": 14},
+      "shanghai-genoa":      {"usd_40ft": 3701, "wow_pct": 20}
+    }
+  }
+}

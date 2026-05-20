@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(python *)",
+      "PowerShell(gh auth *)",
+      "Bash(git --version)",
+      "Read(//c/Users/1812/AppData/Local/Programs//**)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git pull *)",
+      "Bash(git push *)",
+      "Bash(curl -s \"https://api.github.com/repos/TAITRA-ORG/aiez-linenews/actions/runs?branch=main&per_page=1\")",
+      "Read(//c/Users/1812/.config//**)",
+      "Read(//c/Users/1812/AppData/Roaming//**)",
+      "Bash(curl -s \"https://yellow-flower-0fa553400.7.azurestaticapps.net/\")",
+      "Bash(git remote *)",
+      "Bash(gh auth *)",
+      "Bash(where gh *)",
+      "Bash(find /usr -name \"gh\")",
+      "Bash(cmd.exe /c \"where gh\")",
+      "Bash(powershell.exe -Command \"Get-Command gh -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(git commit *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(Get-ChildItem *)",
+      "Bash(curl -sI \"https://yellow-flower-0fa553400.7.azurestaticapps.net/\")",
+      "Bash(gh run *)",
+      "Bash(git rebase *)",
+      "Bash(git fetch *)",
+      "Bash(git reset *)",
+      "Bash(curl -sI \"https://gentle-forest-09c056000.7.azurestaticapps.net/\")",
+      "Bash(curl -s \"https://gentle-forest-09c056000.7.azurestaticapps.net/\")",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:linenews01.aieztrade.com)"
+    ]
+  }
+}

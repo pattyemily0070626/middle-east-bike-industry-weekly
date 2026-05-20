@@ -1,0 +1,13 @@
+# Python dependencies for bike-weekly fetcher / verifier / renderer
+# Install: python -m pip install -r requirements.txt
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=5.0
+openpyxl>=3.1
+odfpy>=1.4
+feedparser>=6.0
+playwright>=1.40
+Pillow>=10.0
+
+# Optional (for advanced OCR fallback)
+# pytesseract>=0.3

@@ -1,0 +1,44 @@
+{
+  "version": "2026.05.15",
+  "description": "自行車產業 × 中東情勢週報來源清單。tier=可信度分級；frequency=core 每週必抓，trigger 為事件觸發。",
+  "tiers": {
+    "T1": "官方/原始：數字與政策真實值",
+    "T2": "專業媒體：產業詮釋與廠商動態",
+    "T3": "一般媒體：補充與時效，需 cross-check",
+    "T4": "OSINT/社群：僅作 lead，不直接引用"
+  },
+  "rules": {
+    "verification": "每個關鍵數字至少 1 個 T1 或 2 個 T2 互證",
+    "conflicting_data": "並列各方說法 + 標示分歧，不擅自取均值",
+    "missing_data": "抓不到 source 一律標『待補』，禁止用模型記憶填空",
+    "paid_db": "Drewry/Lloyd's List/Bloomberg 等付費庫一律只用公開摘要"
+  },
+  "middle_east": [
+    {"id": "ME-01", "tier": "T1", "name": "IMF PortWatch", "url": "https://portwatch.imf.org/", "provides": "蘇伊士/紅海船隻流量、分流統計（每日 CSV）", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "ME-02", "tier": "T1", "name": "UKMTO Recent Incidents", "url": "https://www.ukmto.org/recent-incidents", "provides": "紅海/亞丁灣最近事件通報、警示區公告", "frequency": "core", "scrape_difficulty": "manual", "note": "頁面為 Sitecore JS 渲染，內容透過 API 載入且 API 鎖 403。Stage 3 接 Playwright 後可恢復。目前以 Loadstar/Reuters 替代航運面新聞。"},
+    {"id": "ME-03", "tier": "T1", "name": "IMB Piracy Reporting Centre", "url": "https://www.icc-ccs.org/piracy-reporting-centre/live-piracy-report", "provides": "海上襲擊事件官方紀錄", "frequency": "trigger", "scrape_difficulty": "easy"},
+    {"id": "ME-04", "tier": "T1", "name": "USCENTCOM Press", "url": "https://www.centcom.mil/MEDIA/", "provides": "美軍紅海/葉門打擊行動官方稿", "frequency": "trigger", "scrape_difficulty": "easy"},
+    {"id": "ME-05", "tier": "T1", "name": "EU NAVFOR ASPIDES", "url": "", "provides": "歐盟紅海護航行動公告", "frequency": "trigger", "scrape_difficulty": "unstable"},
+    {"id": "ME-06", "tier": "T2", "name": "The Loadstar", "url": "https://theloadstar.com/", "provides": "航運產業詮釋、影響業者實例", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "ME-07", "tier": "T2", "name": "Lloyd's List (public)", "url": "https://lloydslist.com/", "provides": "海運專業，僅用公開摘要", "frequency": "trigger", "scrape_difficulty": "limited"},
+    {"id": "ME-08", "tier": "T2", "name": "ACLED", "url": "https://acleddata.com/", "provides": "衝突事件結構化資料（學術級）", "frequency": "core", "scrape_difficulty": "needs-api-key", "note": "需到 acleddata.com 註冊免費 API key 後填入"},
+    {"id": "ME-09", "tier": "T2", "name": "Reuters Middle East", "url": "https://www.reuters.com/world/middle-east-and-africa/", "provides": "國際時效新聞", "frequency": "core", "scrape_difficulty": "easy", "note": "Reuters 反爬蟲嚴格，若仍 401/403 改抓 BBC News 或 AP 為替代"},
+    {"id": "ME-10", "tier": "T2", "name": "Drewry WCI 週報（公開）", "url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry", "provides": "上海-鹿特丹等運價週指數，每週四公布", "frequency": "core", "scrape_difficulty": "easy"}
+  ],
+  "bicycle": [
+    {"id": "BIKE-01", "tier": "T1", "name": "公開資訊觀測站 — Giant 9921 / Merida 9914", "url": "https://mops.twse.com.tw", "provides": "月營收、法說會、重訊（每月 10 日前）", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "BIKE-01A", "tier": "T1", "name": "Yahoo TW Stock — Giant 9921 月營收", "url": "https://tw.stock.yahoo.com/quote/9921.TW/revenue", "provides": "月營收實數（千元）、月增率、年增率", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "BIKE-01B", "tier": "T1", "name": "Yahoo TW Stock — Merida 9914 月營收", "url": "https://tw.stock.yahoo.com/quote/9914.TW/revenue", "provides": "月營收實數（千元）、月增率、年增率", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "BIKE-01C", "tier": "T1", "name": "Yahoo TW Stock — Ideal Bike 愛地雅 5341 月營收", "url": "https://tw.stock.yahoo.com/quote/5341.TW/revenue", "provides": "月營收實數（千元）、月增率、年增率", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "BIKE-01D", "tier": "T1", "name": "Yahoo TW Stock — 桂盟 KMC 5306 月營收", "url": "https://tw.stock.yahoo.com/quote/5306.TW/revenue", "provides": "月營收實數（千元）、月增率、年增率", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "BIKE-02", "tier": "T1", "name": "財政部關務署進出口統計", "url": "https://portal.sw.nat.gov.tw/APGA/GA03", "provides": "L1/L2 HS 碼月度出口", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "BIKE-03", "tier": "T1", "name": "EU TARIC / Eurostat", "url": "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/taric_en", "provides": "歐盟對中、對台自行車反傾銷/反補貼稅", "frequency": "trigger", "scrape_difficulty": "medium"},
+    {"id": "BIKE-04", "tier": "T1", "name": "USTR Section 301", "url": "https://ustr.gov/", "provides": "美對中自行車關稅清單與調整", "frequency": "trigger", "scrape_difficulty": "easy"},
+    {"id": "BIKE-05", "tier": "T2", "name": "Bike Europe", "url": "https://www.bike-eu.com/", "provides": "歐洲自行車產業主來源", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "BIKE-06", "tier": "T2", "name": "Bicycle Retailer & Industry News", "url": "https://www.bicycleretailer.com/", "provides": "美國市場", "frequency": "core", "scrape_difficulty": "easy"},
+    {"id": "BIKE-07", "tier": "T2", "name": "CyclingIndustry.News", "url": "https://cyclingindustry.news/", "provides": "國際產業新聞", "frequency": "trigger", "scrape_difficulty": "easy"},
+    {"id": "BIKE-08", "tier": "T2", "name": "工商時報/經濟日報 自行車版", "url": "", "provides": "台灣本地觀點", "frequency": "trigger", "scrape_difficulty": "easy"},
+    {"id": "BIKE-09", "tier": "T2", "name": "TBA 台灣區自行車輸出業同業公會", "url": "", "provides": "非公開產業數據需窗口提供", "frequency": "trigger", "scrape_difficulty": "manual"},
+    {"id": "BIKE-10", "tier": "T3", "name": "Nikkei Asia / 中央社財經", "url": "https://asia.nikkei.com/", "provides": "亞洲視角補充，需 cross-check", "frequency": "trigger", "scrape_difficulty": "limited"}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Azure Functions backend for reader feedback widget",
+  "main": "feedback/index.js",
+  "engines": {
+    "node": "~20"
+  },
+  "dependencies": {
+    "@azure/data-tables": "^13.3.0"
+  }
+}

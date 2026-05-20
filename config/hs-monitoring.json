@@ -1,0 +1,31 @@
+{
+  "version": "2026.05.15",
+  "description": "自行車產業週報核心監測 HS 8 碼清單。L1=每週必抓；L2=事件觸發；L3=完整對照（見 reference/自行車-HS碼對照表-基準版.xlsx）。",
+  "source_reference": "reference/自行車-HS碼對照表-基準版.xlsx",
+  "convention_note": "電動自行車一律採海關標準碼 87116000（不採基準檔的 87119010）。",
+  "L1_core": [
+    {"hs8": "87120010", "category": "成車", "subcategory": "一般成車（公路車/登山車）", "note": "出口金額第一大宗"},
+    {"hs8": "87116000", "category": "成車", "subcategory": "電動自行車", "note": "海關標準碼，涵蓋 e-bike 主力"},
+    {"hs8": "87149100", "category": "零組件", "subcategory": "車架/前叉", "note": "結構件出口大宗"},
+    {"hs8": "87149200", "category": "零組件", "subcategory": "輪圈/輻條", "note": "輪組系統"},
+    {"hs8": "87149300", "category": "零組件", "subcategory": "花鼓（輪轂）", "note": "輪組系統"},
+    {"hs8": "87149400", "category": "零組件", "subcategory": "煞車系統", "note": "V煞/碟煞"},
+    {"hs8": "87149500", "category": "零組件", "subcategory": "坐墊系統", "note": "坐墊/鞍座柱"},
+    {"hs8": "87149600", "category": "零組件", "subcategory": "驅動系統", "note": "踏板/曲柄/鏈輪"},
+    {"hs8": "87149900", "category": "零組件", "subcategory": "其他自行車零件", "note": "把手、避震器、線束等雜項"},
+    {"hs8": "85013100", "category": "電動零件", "subcategory": "直流馬達", "note": "e-bike 動力來源"},
+    {"hs8": "85065000", "category": "電動零件", "subcategory": "鋰電池組", "note": "e-bike 動力來源"}
+  ],
+  "L2_event_triggered": [
+    {"hs8": "85371000", "category": "電動零件", "subcategory": "控制器", "trigger": "電動車管制/召回新聞"},
+    {"hs8": "85176200", "category": "電動零件", "subcategory": "電動儀表/通訊裝置", "trigger": "電動車管制新聞"},
+    {"hs8": "85444200", "category": "電動零件", "subcategory": "專用線束/轉接線", "trigger": "電動車管制新聞"},
+    {"hs8": "40111000", "category": "周邊", "subcategory": "外胎", "trigger": "輪胎業重大事件"},
+    {"hs8": "40132000", "category": "周邊", "subcategory": "內胎", "trigger": "輪胎業重大事件"},
+    {"hs8": "85122000", "category": "周邊電子", "subcategory": "車燈", "trigger": "安全規範變更"},
+    {"hs8": "85123000", "category": "周邊電子", "subcategory": "車鈴/喇叭", "trigger": "安全規範變更"},
+    {"hs8": "65061000", "category": "人身部品", "subcategory": "安全帽", "trigger": "安全規範變更"},
+    {"hs8": "61143000", "category": "人身部品", "subcategory": "騎行服裝（化纖）", "trigger": "重大運動賽事/品牌動態"},
+    {"hs8": "83014000", "category": "周邊", "subcategory": "自行車鎖", "trigger": "城市自行車政策"}
+  ]
+}
