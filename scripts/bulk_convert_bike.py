@@ -88,7 +88,7 @@ def parse_file(md_path: pathlib.Path) -> dict:
     date_iso = ""
     h1 = re.search(r"^#\s+.+$", txt, re.MULTILINE)
     if h1:
-        d = re.search(r"\((\d{4})年(\d{1,2})月(\d{1,2})日\)", h1.group(0))
+        d = re.search(r"\((\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日\)", h1.group(0))
         if d:
             y, mo, dy = d.group(1), d.group(2).zfill(2), d.group(3).zfill(2)
             date_iso = f"{y}-{mo}-{dy}"
