@@ -108,6 +108,29 @@ body {
   color: var(--text-heading);
   line-height: 1;
 }
+/* AiEZ TRADE brand lockup (依品牌規範 #00B4F0 + #FF8C37 重繪 inline SVG) */
+.aiez-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  color: var(--text-heading);
+}
+.aiez-logo-footer {
+  height: 48px;
+  width: auto;
+  display: block;
+  margin: 0 auto 0.6rem;
+  color: var(--text-primary);
+}
+.footer-attribution {
+  font-family: 'Noto Sans TC', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 0.82rem;
+  opacity: 0.7;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.9rem;
+  text-align: center;
+}
 .footer-brand {
   font-family: 'Archivo', sans-serif;
   font-weight: 800;
@@ -941,18 +964,23 @@ a:hover {
   <!-- Decorative topbar -->
   <div class="topbar">
     <div class="brand">
-      <span class="brand-icon" aria-hidden="true">
-        <svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="16" cy="44" r="14"/>
-          <circle cx="48" cy="44" r="14"/>
-          <circle cx="16" cy="44" r="2" fill="currentColor"/>
-          <circle cx="48" cy="44" r="2" fill="currentColor"/>
-          <path d="M16 44 L28 22 L44 22 L48 44"/>
-          <path d="M28 22 L36 44"/>
-          <path d="M34 22 L40 12 L46 12"/>
-        </svg>
-      </span>
-      <span class="brand-text">AiEZ TRADE</span>
+      <!-- AiEZ TRADE 品牌標誌組合（依 2024-12-19 品牌規範 #00B4F0 主藍 + #FF8C37 主橘 重繪 inline SVG） -->
+      <svg class="aiez-logo" viewBox="0 0 260 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiEZ TRADE">
+        <g fill="none" stroke="#00B4F0" stroke-linecap="round" stroke-linejoin="round">
+          <!-- A 字主結構：左斜線 + 頂點 + 右斜線 -->
+          <path d="M16 66 L 50 14 L 90 66" stroke-width="3.4"/>
+          <!-- 長橫掃過 A（筆觸軌跡，象徵速度） -->
+          <path d="M6 44 L 100 36" stroke-width="3.4"/>
+          <!-- 副軌跡斜線（增加動態感） -->
+          <path d="M32 64 L 78 18" stroke-width="2.2" opacity="0.85"/>
+          <!-- i 字身 -->
+          <line x1="108" y1="32" x2="108" y2="66" stroke-width="5"/>
+        </g>
+        <!-- i 字上方橘點（品牌主橘 #FF8C37） -->
+        <circle cx="108" cy="21" r="3.4" fill="#FF8C37"/>
+        <!-- EZ TRADE 標準字（Inter 字體，黑色，依規範） -->
+        <text x="122" y="60" font-family="'Inter','Noto Sans TC',-apple-system,system-ui,sans-serif" font-size="32" font-weight="700" fill="currentColor" letter-spacing="1.5">EZ TRADE</text>
+      </svg>
       <span class="divider"></span>
       <span class="status"><span class="dot"></span>WEEKLY · BICYCLE INDUSTRY</span>
     </div>
@@ -1378,7 +1406,18 @@ Ampler Bikes（愛沙尼亞高階都會通勤電動自行車）進入破產程�
 
   <div class="footer">
     <div class="divider"></div>
-    <div class="footer-brand">AiEZ TRADE</div>
+    <!-- AiEZ TRADE 品牌標誌組合（footer 大尺寸版） -->
+    <svg class="aiez-logo-footer" viewBox="0 0 260 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiEZ TRADE">
+      <g fill="none" stroke="#00B4F0" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 66 L 50 14 L 90 66" stroke-width="3.4"/>
+        <path d="M6 44 L 100 36" stroke-width="3.4"/>
+        <path d="M32 64 L 78 18" stroke-width="2.2" opacity="0.85"/>
+        <line x1="108" y1="32" x2="108" y2="66" stroke-width="5"/>
+      </g>
+      <circle cx="108" cy="21" r="3.4" fill="#FF8C37"/>
+      <text x="122" y="60" font-family="'Inter','Noto Sans TC',-apple-system,system-ui,sans-serif" font-size="32" font-weight="700" fill="currentColor" letter-spacing="1.5">EZ TRADE</text>
+    </svg>
+    <div class="footer-attribution">由 TAITRA · AiEZ TRADE 提供</div>
     <div>中東情勢產業週報 · 自行車產業專屬 · 2026-05-22</div>
     <div style="margin-top:0.4rem; opacity:0.7;">本報告僅供參考，不構成任何投資或政策建議</div>
   </div>
