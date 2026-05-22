@@ -19,6 +19,7 @@
 - [後端 API](#後端-api)
 - [手動批次重建](#手動批次重建)
 - [來源規則](#來源規則)
+- [撰寫規則（文字風格）](#撰寫規則文字風格)
 - [免責聲明](#免責聲明)
 
 ---
@@ -212,6 +213,43 @@ python scripts/bulk_convert_bike.py
 - 付費資料庫一律只用公開摘要
 - **HS 碼原則**：6 碼為預設；廣義碼（如 8506.50 鋰電池）標 ⚠ 註記；8 碼僅在 6 碼太寬時用
 - **關務署數據原則**：當月公布為「初步值」，後續修正為「確定值」，引用時必須標示
+
+---
+
+## 撰寫規則（文字風格）
+
+報告受眾為**台灣自行車產業中小企業**，撰寫時須遵守以下四項規則：
+
+### 1. 出口動能指標 — 同月二次跑時沿用當月數據判讀
+
+「自行車出口動能」屬於月度指標，每月只有一次新數據（關務署初步值次月公布、確定值翌月修正）。同月跑第二次週報時，仍依當月已公布的初步值給出判讀（如「分化（電動自行車續弱）」、「疲弱」、「整體下滑」等），**不可空白、也不可寫「待 X 月確定值」**。
+
+### 2. 全文一律繁體中文，不留英文原文
+
+從外電（Drewry、The Loadstar、Bike Europe、BRAIN 等）摘錄的內容、論點、引述語，一律翻譯為繁體中文。引述句不保留英文原文於正文中，可標示「（中譯）」說明為翻譯。**例外**：專有名詞與品牌名（Drewry、Shimano、SRAM、Trek、UKMTO、Pon Holdings 等）保留原文。
+
+### 3. 「e-bike」一律寫「電動自行車」
+
+所有 e-bike / E-bike / ebike 全部寫作「電動自行車」。**例外**：品牌或公司名中的 eBike（如 Porsche eBike Performance）可保留品牌原名。
+
+### 4. 英文專有名詞首次出現時加註中文說明
+
+文中第一次出現英文縮寫時，以括號形式標註中文全稱與說明，例如：
+
+| 縮寫 | 標註寫法 |
+|---|---|
+| BAF | BAF（Bunker Adjustment Factor，燃油附加費） |
+| PSS | PSS（Peak Season Surcharge，旺季附加費） |
+| FAK | FAK（Freight All Kinds，整艙統一費率） |
+| OEM | OEM（委託代工製造） |
+| ODM | ODM（委託設計與製造） |
+| WCI | WCI（World Container Index，全球貨櫃運價指數） |
+| IACI | IACI（Intra-Asia Container Index，亞洲內部貨櫃運價指數） |
+| SCFI | SCFI（上海貨櫃運價指數） |
+| UCI | UCI（Union Cycliste Internationale，國際自由車總會） |
+| HS code | HS code（Harmonized System，國際商品統一分類碼） |
+
+同一份報告後續再出現可不重複標註。表格「來源」欄位下方的灰字機構說明（如 UKMTO、Drewry 註解）保留現行樣式。
 
 ---
 
