@@ -110,7 +110,10 @@ def parse_file(md_path: pathlib.Path) -> dict:
         )
         return m.group(1).strip() if m else default
 
-    redsea = find_indicator("紅海航運風險")
+    # 接受「中東航運風險」（新）與「紅海航運風險」（舊）兩種寫法
+    redsea = find_indicator("中東航運風險")
+    if redsea == "—":
+        redsea = find_indicator("紅海航運風險")
     freight = find_indicator("WCI")  # 任何含 WCI 都符合
     export_ = find_indicator("自行車出口動能")
 

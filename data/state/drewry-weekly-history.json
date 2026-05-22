@@ -10,5 +10,17 @@
       "shanghai-new-york":   {"usd_40ft": 4252, "wow_pct": 14},
       "shanghai-genoa":      {"usd_40ft": 3701, "wow_pct": 20}
     }
+  },
+  "2026-W21": {
+    "fetched_at": "2026-05-21",
+    "source": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry",
+    "wci_composite_usd_40ft": 2712,
+    "wci_composite_wow_pct": 6,
+    "routes": {
+      "shanghai-rotterdam":   {"usd_40ft": 2773, "wow_pct": 15},
+      "shanghai-los-angeles": {"usd_40ft": 3385, "wow_pct": 1},
+      "shanghai-new-york":    {"usd_40ft": 4317, "wow_pct": 2},
+      "shanghai-genoa":       {"usd_40ft": 4082, "wow_pct": 10}
+    }
   }
 }

@@ -1,111 +1,123 @@
 {
-  "_note": "Bike Weekly 表 02 主要廠商動態與營運訊號的廠商池。每週由 5 家固定核心 + 1-3 家動態加碼組成，總數 4-5 家。",
-  "_version": "2026.05.16",
+  "_note": "Bike Weekly 表 02 主要廠商動態與營運訊號的廠商池。受眾為台灣中小企業（SME），核心廠商以「SME 在意的對象」為準：國際品牌客戶（OEM 訂單來源）+ 全球零件龍頭。台灣大廠（Giant/Merida/Ideal/桂盟/彥豪）移至動態池，本週有具體事件才加入。",
+  "_version": "2026.05.21",
+  "_audience": "台灣自行車產業中小企業（零件廠、A-Team 外圍、配件廠、上下游 supplier）",
 
   "core_fixed": [
     {
-      "id": "GIANT",
-      "name_tc": "Giant 巨大",
-      "ticker": "9921",
-      "market": "TWSE",
-      "category": "成車",
-      "data_source": "yahoo_tw_stock",
-      "revenue_url": "https://tw.stock.yahoo.com/quote/9921.TW/revenue",
+      "id": "TREK",
+      "name_tc": "Trek",
+      "country": "USA",
+      "category": "成車品牌（高階運動）",
       "weight": "primary",
-      "notes": "台廠龍頭，整車製造，歐美高曝險"
+      "data_source": "news_only",
+      "notes": "美國最大自行車品牌之一；SME 的主要 OEM 訂單來源之一",
+      "watch_for": ["新品線發布", "歐美零件採購策略", "中國/越南供應鏈調整"]
     },
     {
-      "id": "MERIDA",
-      "name_tc": "Merida 美利達",
-      "ticker": "9914",
-      "market": "TWSE",
-      "category": "成車",
-      "data_source": "yahoo_tw_stock",
-      "revenue_url": "https://tw.stock.yahoo.com/quote/9914.TW/revenue",
+      "id": "SPECIALIZED",
+      "name_tc": "Specialized",
+      "country": "USA",
+      "category": "成車品牌（高階運動）",
       "weight": "primary",
-      "notes": "台廠二哥，e-bike 曝險高於 Giant"
+      "data_source": "news_only",
+      "notes": "高階運動車品牌，技術趨勢領頭者",
+      "watch_for": ["e-bike 新款", "車架材質創新", "電動馬達合作"]
     },
     {
-      "id": "IDEAL",
-      "name_tc": "Ideal Bike 愛地雅",
-      "ticker": "5341",
-      "market": "TWSE",
-      "category": "成車",
-      "data_source": "yahoo_tw_stock",
-      "revenue_url": "https://tw.stock.yahoo.com/quote/5341.TW/revenue",
-      "weight": "secondary",
-      "notes": "台廠第三大整車"
+      "id": "PON_HOLDINGS",
+      "name_tc": "Pon Holdings",
+      "country": "Netherlands",
+      "category": "歐洲品牌集團",
+      "weight": "primary",
+      "data_source": "news_only",
+      "notes": "擁有 Cervelo / Santa Cruz / Royal Dutch Gazelle / Kalkhoff 等品牌；歐洲市場主力買家",
+      "watch_for": ["e-bike 銷量", "供應鏈本地化策略", "歐盟反規避政策反應"]
     },
     {
-      "id": "KMC",
-      "name_tc": "桂盟 KMC",
-      "ticker": "5306",
-      "market": "TWSE",
-      "category": "零組件（鏈條）",
-      "data_source": "yahoo_tw_stock",
-      "revenue_url": "https://tw.stock.yahoo.com/quote/5306.TW/revenue",
+      "id": "ACCELL_GROUP",
+      "name_tc": "Accell Group",
+      "country": "Netherlands",
+      "category": "歐洲第二大製造商",
       "weight": "primary",
-      "notes": "全球自行車鏈條龍頭，台灣關鍵零組件代表"
+      "data_source": "news_only",
+      "notes": "歐洲第二大自行車製造商；多品牌（Batavus / Sparta / Koga / Lapierre / Raleigh / Haibike）；e-bike 重壓",
+      "watch_for": ["財報", "歐洲庫存週期", "e-bike 動力系統合作"]
     },
     {
       "id": "SHIMANO",
       "name_tc": "Shimano",
       "ticker": "7309.T",
-      "market": "TSE",
-      "category": "上游零件（變速/傳動）",
-      "data_source": "news_only",
-      "revenue_url": null,
+      "country": "Japan",
+      "category": "全球零件龍頭（變速/傳動）",
       "weight": "primary",
-      "notes": "全球變速/傳動龍頭；日股月度資料不易抓，靠 Bike Europe / BRAIN 新聞追蹤"
+      "data_source": "news_only",
+      "notes": "全球變速/傳動龍頭；SME 的主要上游供應商；其交期、定價影響整個產業",
+      "watch_for": ["季報", "Di2 電變新品", "供貨吃緊解除"]
     }
   ],
 
   "dynamic_pool": {
-    "_note": "依本週實際訊號選 1-3 家加入表 02。沒有訊號不選。",
-    "tw_components_and_motors": [
-      "Bafang 八方",
-      "彥豪 (5278)",
-      "亞獵士 (1742)",
-      "A-Team 聯盟整體動態"
+    "_note": "依本週實際訊號選 0-3 家加入表 02。沒事件不選。",
+
+    "tw_listed_big_players": {
+      "_note": "台灣上市自行車與零件大廠 — 月營收、法說會、結構變化時加入",
+      "companies": [
+        {"name": "Giant 巨大 (9921)", "data_url": "https://tw.stock.yahoo.com/quote/9921.TW/revenue"},
+        {"name": "Merida 美利達 (9914)", "data_url": "https://tw.stock.yahoo.com/quote/9914.TW/revenue"},
+        {"name": "Ideal Bike 愛地雅 (5341)", "data_url": "https://tw.stock.yahoo.com/quote/5341.TW/revenue"},
+        {"name": "桂盟 KMC (5306)", "data_url": "https://tw.stock.yahoo.com/quote/5306.TW/revenue"},
+        {"name": "彥豪 (5278)", "data_url": "https://tw.stock.yahoo.com/quote/5278.TW/revenue"}
+      ]
+    },
+
+    "global_brands_secondary": [
+      "Cannondale (USA)",
+      "Bianchi (Italy)",
+      "Pierer Mobility / KTM Bicycles (Austria)",
+      "Riese & Müller (Germany, premium e-bike)"
     ],
-    "global_brands_oem_customers": [
-      "Trek",
-      "Specialized",
-      "Cannondale",
-      "Pon Holdings (Cervelo / Santa Cruz)",
-      "Accell Group",
-      "Pierer Mobility (KTM / Husqvarna / GASGAS Bikes)"
-    ],
+
     "global_retail_channels": [
       "Halfords (UK)",
-      "Decathlon",
-      "REI (US)"
+      "Decathlon (France/Global)",
+      "REI (USA)"
     ],
-    "upstream_competitors_or_exits": [
-      "Bosch eBike Systems",
-      "Brose",
-      "Mahle SmartBike Systems",
-      "Porsche eBike Performance",
-      "SRAM"
+
+    "ebike_drive_system_makers": [
+      "Bafang 八方 (China)",
+      "Bosch eBike Systems (Germany)",
+      "Brose (Germany)",
+      "Mahle SmartBike Systems (Germany)",
+      "Yamaha Motor PWseries (Japan)"
     ],
+
+    "exits_or_structural_changes": [
+      "Porsche eBike Performance (2026/5 退出)",
+      "SRAM (USA, Shimano 主要競爭者)"
+    ],
+
     "industry_associations": [
       "TBA 台灣區自行車輸出業同業公會",
-      "歐盟 CONEBI",
-      "美國 PeopleForBikes"
+      "CONEBI（歐洲自行車產業協會）",
+      "PeopleForBikes（美國自行車產業聯盟）",
+      "A-Team 聯盟整體動態"
     ]
   },
 
   "selection_criteria_for_dynamic": [
-    "1. 本週公布財報、月營收、或公開資訊觀測站重大訊息",
-    "2. 本週受政策衝擊（歐盟反規避、美國 301、各國反傾銷／反補貼新進展）",
+    "1. 本週公布財報、月營收、或關鍵投資人活動（如 Q1/Q4 法說會）",
+    "2. 本週受政策衝擊（歐盟反規避調查、美 301 關稅、各國反傾銷／反補貼新進展）",
     "3. 本週發生併購、退出、產線關閉、結構性變化",
-    "4. 本週歐美品牌客戶有重大動態（影響台廠 OEM 訂單）",
-    "5. A-Team 聯盟、TBA、CONEBI 等產業組織重大公告"
+    "4. 本週上游/競爭者重大動態（如 Shimano 供貨變化、Bosch 新一代動力系統）",
+    "5. A-Team / TBA / CONEBI 等產業組織重大公告"
   ],
 
   "operational_rules": [
-    "每週表 02 含 4-5 家：5 固定 + 0-3 動態，視當週訊號豐富度動態調整",
-    "固定 5 家中若某家當週無新訊息，仍列出但內容簡述為『無新公開訊息』，保持週與週可比性",
-    "動態加碼的廠商，下週若無持續訊號則自動退出"
+    "每週表 02 含 4-5 家：5 國際大廠固定 + 0-3 動態（含台廠）",
+    "固定 5 家中若某家當週無新訊息，仍列出標『無新公開訊息』維持週間可比性",
+    "台廠（Giant/Merida/Ideal/桂盟/彥豪）只在『tw_listed_big_players』動態加碼時才出現；其月營收公布日（每月 10 日前）通常會觸發加碼",
+    "動態加碼的廠商下週無持續訊號則自動退出",
+    "受眾為 SME，廠商敘述應強調『對 SME 的訊號意義』，而非廠商自身策略細節"
   ]
 }

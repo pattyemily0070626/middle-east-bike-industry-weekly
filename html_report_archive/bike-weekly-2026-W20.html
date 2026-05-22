@@ -1005,7 +1005,7 @@ a:hover {
   <div class="indicator-strip">
     <div class="indicator-cell">
       <div class="val red">高</div>
-      <div class="lbl">紅海航運風險</div>
+      <div class="lbl">中東航運風險</div>
     </div>
     <div class="indicator-cell">
       <div class="val red">上升</div>
@@ -1382,7 +1382,16 @@ a:hover {
 (function(){
   // ============ Archive items (injected by /middle-east-analysis-Azure) ============
   // Each entry: { date, day, title, ind?, label?, href, current? }
-  const ARCHIVE_ITEMS = [];
+  const ARCHIVE_ITEMS = [
+  {
+    "date": "2026-05-22",
+    "day": "2026-W21",
+    "title": "本週三大主軸：(1) Drewry WCI 連續第 3 週上漲、本週 +6% 至 $2,712/40ft，亞歐線旺季提前…",
+    "href": "/html_report_archive/bike-weekly-2026-W21.html",
+    "ind": "red",
+    "label": "高"
+  }
+];
 
   const panel = document.getElementById('archivePanel');
   const overlay = document.getElementById('archiveOverlay');
