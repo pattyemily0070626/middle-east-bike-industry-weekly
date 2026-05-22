@@ -266,7 +266,7 @@ def row_t3(r: list[str]) -> str:
     )
 
 
-def render(entry: dict, archive: list[dict]) -> str:
+def render(entry: dict, archive: list[dict], logo_path: str = "assets/aiez-logo.png") -> str:
     tpl = TEMPLATE.read_text(encoding="utf-8")
 
     t1_rows = "\n".join(row_t1(r) for r in entry["t1"]) or \
@@ -300,6 +300,7 @@ def render(entry: dict, archive: list[dict]) -> str:
         "{{TABLE3_ROWS}}": t3_rows,
         "{{IMPLICATIONS_ITEMS}}": imp_html,
         "{{SOURCES_ITEMS}}": src_html,
+        "{{LOGO_PATH}}": logo_path,
         # Script-safe JSON：跳脫 </ 避免 archive 內容意外結束 <script>
         "{{ARCHIVE_ITEMS_JSON}}": json.dumps(archive, ensure_ascii=False, indent=2).replace("</", "<\\/"),
     }
@@ -348,7 +349,8 @@ def main():
     for e in entries:
         self_href = f"{HTML_SITE_PREFIX}/bike-weekly-{e['week_iso']}.html"
         archive = [clean(m) for m in manifest if m["href"] != self_href]
-        html_out = render(e, archive)
+        # archive 頁在 /html_report_archive/，logo 要往上一層找
+        html_out = render(e, archive, logo_path="../assets/aiez-logo.png")
         out_path = HTML_DIR / f"bike-weekly-{e['week_iso']}.html"
         out_path.write_text(html_out, encoding="utf-8")
         print(f"Wrote: {out_path.relative_to(BASE)} ({len(html_out):,} chars)")
@@ -356,7 +358,7 @@ def main():
     # index.html = 最新（archive 排除自己）
     newest = entries[0]
     newest_archive = [clean(m) for m in manifest[1:]]
-    index_html = render(newest, newest_archive)
+    index_html = render(newest, newest_archive, logo_path="assets/aiez-logo.png")
     (BASE / "index.html").write_text(index_html, encoding="utf-8")
     print(f"\nindex.html ← newest ({newest['week_iso']})")
     print(f"Total entries: {len(manifest)}")
