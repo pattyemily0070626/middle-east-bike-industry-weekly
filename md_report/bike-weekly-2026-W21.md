@@ -8,13 +8,25 @@
 | WCI 運價走勢 | 續漲（連 3 週） |
 | 自行車出口動能 | 分化（電動自行車續弱） |
 
-**評估依據**：本週三大主軸：(1) Drewry WCI（World Container Index，全球貨櫃運價指數）連續第 3 週上漲、本週 +6% 至 $2,712/40ft，亞歐線旺季提前到貨、單週 +10–15%；跨太平洋線僅 +1–2%；(2) UKMTO（英國海事貿易行動處）本週無新公開事件，但 Drewry 明確將「中東地緣張力」列為運價推升因素，戰爭附加險與燃油成本續高；(3) 歐美電動自行車品牌端結構性收縮續傳：愛沙尼亞 Ampler Bikes 進入破產程序、美國 United Wheels 暫停 Niner 與 Buzz 電動自行車品牌；同步 SRAM 對 UCI（國際自由車總會）變速比規則訴訟勝訴，全球零件競爭格局再調整；(4) 自行車出口動能依 4 月初步值呈現分化：二輪腳踏車 +15.6%、電動自行車整車 -31.0%、車架/叉 -2.05%、輪圈/輻條 -8.47%，整體仍以電動自行車續弱為主訊號。
+**評估依據**：本週四大主軸：<br><br>
+**(1)** Drewry WCI（World Container Index，全球貨櫃運價指數）連續第 3 週上漲、本週 +6% 至 $2,712/40ft，亞歐線旺季提前到貨、單週 +10–15%；跨太平洋線僅 +1–2%。<br><br>
+**(2)** UKMTO（英國海事貿易行動處）本週無新公開事件，但 Drewry 明確將「中東地緣張力」列為運價推升因素，戰爭附加險與燃油成本續高。<br><br>
+**(3)** 歐美電動自行車品牌端結構性收縮續傳：愛沙尼亞 Ampler Bikes 進入破產程序、美國 United Wheels 暫停 Niner 與 Buzz 電動自行車品牌；同步 SRAM 對 UCI（國際自由車總會）變速比規則訴訟勝訴，全球零件競爭格局再調整。<br><br>
+**(4)** 自行車出口動能依 4 月初步值呈現分化：二輪腳踏車 +15.6%、電動自行車整車 -31.0%、車架/叉 -2.05%、輪圈/輻條 -8.47%，整體以電動自行車續弱為主訊號。
 
 ---
 
 ## 摘要
 
-過去 7 天關鍵變化：(1) <strong>Drewry WCI 連 3 週上漲、本週 +6%</strong>，上海→鹿特丹 <span class="data">+15%</span> $2,773、上海→熱那亞 <span class="data">+10%</span> $4,082、上海→紐約 <span class="data">+2%</span> $4,317、上海→洛杉磯 <span class="data">+1%</span> $3,385；亞歐線旺季提前明顯，跨太平洋線僅小幅上漲；(2) UKMTO 本週無新公開事件（最近一起為 5/14 阿聯 Fujairah 油輪劫案），但 Drewry 明確指出「中東地緣張力推升緊急燃油附加費與船用燃油成本」；ONE 已宣布跨太平洋東向 <span class="data">PSS（Peak Season Surcharge，旺季附加費） $2,000</span>/40ft、6/1 生效；(3) <strong>歐美電動自行車品牌端結構性收縮續傳</strong>：Ampler Bikes（愛沙尼亞高階都會通勤電動自行車）進入破產程序、United Wheels 暫停 Niner 與 Buzz 電動自行車品牌、Schürmann 輪圈廠關閉；呼應 W20 Porsche eBike Performance 退出訊號；(4) SRAM 對 UCI 變速比規則訴訟在比利時市場法院勝訴，對 Shimano 高階公路車市場滲透壓力升高；(5) Pon Holdings 旗下 Gazelle 推荷蘭工廠工藝專文，強化歐洲在地製造敘事；(6) 台廠 4 月營收續弱：Giant 巨大 <span class="data">-3.15%</span>、Merida 美利達 <span class="data">-14.32%</span>（同 W20 公布資料）。
+過去 7 天關鍵變化：<br><br>
+**(1) Drewry WCI 連 3 週上漲、本週 +6%。**<br>
+上海→鹿特丹 <span class="data">+15%</span> $2,773、上海→熱那亞 <span class="data">+10%</span> $4,082、上海→紐約 <span class="data">+2%</span> $4,317、上海→洛杉磯 <span class="data">+1%</span> $3,385；亞歐線旺季提前明顯，跨太平洋線僅小幅上漲。<br><br>
+**(2) UKMTO 本週無新公開事件，但中東地緣張力被 Drewry 明確列為運價推升因素。**<br>
+最近一起 UKMTO 事件為 5/14 阿聯 Fujairah 油輪劫案；Drewry 5/21 評論「中東地緣張力推升緊急燃油附加費與船用燃油成本」。ONE 已宣布跨太平洋東向 <span class="data">PSS（Peak Season Surcharge，旺季附加費）$2,000</span>/40ft、6/1 生效。<br><br>
+**(3) 歐美電動自行車品牌端結構性收縮續傳。**<br>
+Ampler Bikes（愛沙尼亞高階都會通勤電動自行車）進入破產程序、United Wheels 暫停 Niner 與 Buzz 電動自行車品牌、Schürmann 輪圈廠關閉；呼應 W20 Porsche eBike Performance 退出訊號。<br><br>
+**(4) SRAM 對 UCI 變速比規則訴訟在比利時市場法院勝訴。**<br>
+推翻「54×11 最大齒比」限制，對 Shimano 高階公路車市場滲透壓力升高，全球零件競爭格局再調整。
 
 ---
 
